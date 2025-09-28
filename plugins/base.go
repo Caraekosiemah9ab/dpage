@@ -24,6 +24,5 @@ func RedirectToNonSlash(w http.ResponseWriter, r *http.Request) types.ReturnData
 		path := path + "/"
 		http.Redirect(w, r, path, http.StatusMovedPermanently)
 	}
-
 	return types.ReturnData{Data: "norender"}
 }
