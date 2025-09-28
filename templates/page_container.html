@@ -1,0 +1,31 @@
+{{ define "header" }}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ .Title }}</title>
+        <link rel="stylesheet" href="https://ongg.net/ftp/styles1139.css">
+    </head>
+        <body>
+            <header><h1>{{ .Title }}</h1></header>
+            <div class="burger-menu" id="burgerMenu"><span></span><span></span><span></span></div>
+            <div class="overlay" id="overlay"></div>
+{{ end }}
+
+{{ define "menu" }}
+    <aside id="sideMenu">
+        <h3>Navigation</h3>
+        <ul>
+        {{ range .Data.NavigationdPage }}
+            <li><a href="{{.URL}}" {{if .Target}}target="{{.Target}}"{{end}}>{{.Name}}</a></li>
+        {{end}}
+        </ul>
+    </aside>
+{{ end }}
+
+{{ define "footer" }}
+        <footer><p>All rights reserved © {{ .Data.CurrentYear }}</p></footer>
+    </body>
+</html>
+{{ end }}

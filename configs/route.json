@@ -1,0 +1,8 @@
+[
+  {
+    "url": "/",
+    "plugin": "base.so",
+    "handler": "HomeHandler",
+    "template": "home.html"
+  }
+]

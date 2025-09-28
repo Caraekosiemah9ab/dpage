@@ -1,0 +1,12 @@
+{{ define "home_content" }}
+<div class="container">
+    <main>
+        Cool text
+    </main>
+    {{ template "menu" . }}
+</div>
+{{ end }}
+
+{{ template "header" . }}
+{{ template "home_content" . }}
+{{ template "footer" . }}
